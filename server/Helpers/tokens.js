@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken')
 
 function getToken(payload){
-    const token=jwt.sign(payload,process.env.SECRET_KEY,{expiresIn:"30d"});
+    const token=jwt.sign(payload,process.env.SECRET_KEY);
     return token;
 }
 

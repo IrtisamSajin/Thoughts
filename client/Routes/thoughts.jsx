@@ -1,22 +1,16 @@
 import { useState } from "react";
 import ViewThoughts from "../Components/ViewThoughts";
 
-import jwtDecode from "jwt-decode";
 import Navbar from "../Components/Navbar";
 import NewThought from "../Components/NewThought";
 
-function isExpired(token) {
-  const decodedToken = jwtDecode(token);
-  const currentTime = Date.now() / 1000;
-  return currentTime > decodedToken.exp;
-}
 
 
 export default function Thoughts() {
   var token = localStorage.getItem("token");
   //const [sessionActive,setsessionActive]=useState(true);
   var sessionActive=true;
-  if (!token || isExpired(token))sessionActive=false ;//setsessionActive(false);
+  if (!token)sessionActive=false ;
 
   ///------Here if session active fetch the thoughts from server
   ///-------If can't connect to the server set sessionActive to false
