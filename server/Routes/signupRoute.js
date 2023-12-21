@@ -1,6 +1,6 @@
 const express=require('express');
 const validator=require('validator');
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcryptjs')
 const User=require('../Models/usersModel');
 const { getToken } = require('../Helpers/tokens');
 
