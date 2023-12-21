@@ -30,7 +30,7 @@ mongoose
 
  
 //routes
-app.use("/",(req,res) => {
+app.get("/",(req,res) => {
   res.json({
     message: "Server Reached"
   })
