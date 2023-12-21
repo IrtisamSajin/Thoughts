@@ -30,6 +30,11 @@ mongoose
 
  
 //routes
+app.use("/",(req,res) => {
+  res.json({
+    message: "Server Reached"
+  })
+})
 app.use("/thoughts",authenticate,thoughtsRoute); //
 //app.use("/guest/thoughts,thoughtsRoute")
 app.use("/login", loginRoute);
