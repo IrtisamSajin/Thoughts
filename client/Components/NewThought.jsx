@@ -47,7 +47,7 @@ export default function NewThought({ onUpdate, thoughts }) {
   return (
     <div className="row justify-content-center">
       <div className="col-10 col-md-8 col-lg-6 col-xl-5">
-        <div className="card m-4 p-3 border-dark">
+        <div className="card m-sm-4 m-2 mt-4 p-sm-3 p-1 border-dark">
           <form onSubmit={handleSubmit} className="">
             <div className="container">
               <div className="row justify-content-center">

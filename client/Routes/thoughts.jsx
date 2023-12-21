@@ -12,8 +12,6 @@ export default function Thoughts() {
   var sessionActive=true;
   if (!token)sessionActive=false ;
 
-  ///------Here if session active fetch the thoughts from server
-  ///-------If can't connect to the server set sessionActive to false
   var previousThoughts = JSON.parse(localStorage.getItem("thoughts"));
   if (!previousThoughts) previousThoughts = [];
 
