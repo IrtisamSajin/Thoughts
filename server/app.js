@@ -40,20 +40,6 @@ app.use("/thoughts",authenticate,thoughtsRoute); //
 app.use("/login", loginRoute);
 app.use("/signup", signupRoute);
 
-// Your code
-if (process.env.NODE_ENV === "production") {
-  const path = require("path");
-  app.use(express.static(path.resolve(__dirname, 'client', 'build')));
-  app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'),function (err) {
-          if(err) {
-              res.status(500).send(err)
-          }
-      });
-  })
-}
-// Your code
-
 
 //default error handler
 app.use("/",(err,req,res,next)=>{
